@@ -1,0 +1,176 @@
+FUNDEDPRO TERMS OF SERVICE
+
+Last Updated: 25 October 2024
+Effective Date: 25 October 2024
+
+Website: https://fundedpro-one.vercel.app
+Email: support@fundedpro.com
+
+Welcome to FundedPro ("we," "us," or "our"), a proprietary trading platform founded by Destiny Isibor and operated by GrowthNext - F.Z.E. (Business Registration No. 28831), with its registered office at Office No. 7, AI Robotics HUB, C1 Building, AFZ, Ajman, UAE.
+
+These Terms of Service ("Terms") govern your access to and use of our website at https://fundedpro-one.vercel.app, our trading evaluation programs, simulated funded accounts, and all related services (collectively, the "Services"). By registering, accessing the platform, or participating in any challenge, you ("you," "your," "Trader," or "Customer") agree to be bound by these Terms.
+
+If you do not agree with any part of these Terms, you must not use our Services.
+
+1. OVERVIEW & ACCEPTANCE
+
+FundedPro is a proprietary trading firm that provides skilled traders with access to capital through performance-based evaluation challenges. Our Services are provided by GrowthNext - F.Z.E., and financial transactions are processed by its subsidiary Incenteco Trading LTD. (HE 307114).
+
+These Terms outline the rules, policies, and responsibilities for all users engaging with our platform. By using our Services, you confirm that:
+• You are at least 18 years of age.
+• You are not a resident of any prohibited country.
+• You accept and agree to these Terms in full.
+
+We recommend that you read these Terms carefully before proceeding.
+
+2. ELIGIBILITY & ACCOUNT REGISTRATION
+
+To participate in any of our trading challenges:
+• You must be 18 years or older.
+• You must provide accurate and complete personal information during registration.
+• You may only register under your legal name and verified identity.
+• You are responsible for maintaining the security of your login credentials.
+
+We reserve the right to suspend or terminate any account that provides false information, violates our rules, or engages in fraudulent activity.
+
+3. TRADING EVALUATION MODELS
+
+FundedPro offers multiple evaluation tracks to suit different trading styles and experience levels:
+• Stellar 2-Step Challenge
+• Express Challenge
+• Stellar Lite
+• Instant Funded Account (Direct Access)
+
+Each model has specific rules regarding profit targets, drawdown limits, trading days, and consistency. Full details are available during registration and in our FAQ / Rules section.
+
+EVALUATION RULES SUMMARY:
+
+| Challenge Type       | Daily Loss Limit | Total Loss Limit | Minimum Trading Days | Profit Target |
+|----------------------|------------------|------------------|------------------------|-------------|
+| Evaluation Model     | 5%               | 10%              | 5 days                 | Phase 1: 10%, Phase 2: 5% |
+| Express Model        | 5%               | 10%              | 10 days                | 25%         |
+| Stellar 1-Step       | 3%               | 6%               | 2 days                 | 10%         |
+| Stellar 2-Step       | 5%               | 10%              | 5 days                 | Phase 1: 8%, Phase 2: 5% |
+| Stellar Lite         | 4%               | 8%               | 5 days                 | Phase 1: 8%, Phase 2: 4% |
+
+Upon successful completion of the evaluation, traders advance to the Simulated Funded Phase and become eligible for profit payouts.
+
+4. TRADING RULES & PROHIBITED PRACTICES
+
+To ensure fairness and integrity, all traders must adhere to strict trading guidelines. Violations may result in immediate account termination without refund.
+
+YOU MUST NOT:
+• Exceed daily or total drawdown limits.
+• Engage in cross-account hedging (within or outside our platform).
+• Use automated trading systems, bots, AI, or high-frequency trading algorithms.
+• Perform any form of arbitrage (latency, statistical, triangular, etc.).
+• Exploit system bugs, price delays, or data feed inconsistencies ("Latency Trading").
+• Engage in group trading, copy trading, or mirroring trades from other users.
+• Allow third parties to trade on your behalf.
+• Use slow or external data feeds to gain an unfair advantage.
+• Place spoof orders, wash trades, or fake volume to manipulate the market.
+• Open unusually large or small positions inconsistent with your trading pattern.
+• Trade during extreme market gaps or low liquidity conditions.
+• Use excessive leverage or maintain a negative risk-to-reward ratio (max 5:1 RRR).
+• Practice account rolling (sacrificing one account to boost another).
+• Trade overnight in Futures-based challenges (all positions must be closed daily).
+
+We reserve the right to review trading behavior and suspend accounts that show suspicious or rule-breaking activity.
+
+5. PROFIT SPLITS & PAYOUTS
+
+• FundedPro offers high profit splits, up to 80% or more, depending on account size and performance.
+• Payouts are processed by Incenteco Trading LTD.
+• A processing fee (up to 3.5%) may apply on withdrawals, charged by third-party payment providers (e.g., Rise). This fee is not imposed by us but passed through transparently.
+• Traders must complete KYC verification before requesting their first payout.
+• Withdrawal requests are reviewed and processed within the stated timeframe.
+
+6. FEES & REFUND POLICY
+
+• A one-time registration fee is required to access our evaluation challenges.
+• All payments are final and non-refundable once the service is activated.
+• If no trading activity occurs within 7 days of registration, a refund may be requested.
+• After your first trade, the fee is non-refundable under any circumstances.
+• Add-ons or special offers are also non-refundable.
+• If you do not activate your account within 30 days, access will be suspended.
+
+We incur immediate costs (data feeds, account setup, platform access) upon purchase, which is why refunds are limited.
+
+7. ACCOUNT TERMINATION & SUSPENSION
+
+We may suspend or terminate your account at any time if:
+• You violate any of these Terms.
+• You engage in prohibited trading practices.
+• You fail KYC verification.
+• You initiate an unjustified dispute or chargeback.
+
+Termination may occur without notice in cases of fraud or abuse. No refunds will be issued.
+
+8. INTELLECTUAL PROPERTY & RESTRICTIONS
+
+All content, software, logos, and trading rules on our platform are the exclusive property of FundedPro or its licensors. You may not:
+• Copy, reproduce, or resell our Services.
+• Reverse-engineer or exploit our platform.
+• Use our brand, name, or content without written permission.
+
+9. DISPUTE RESOLUTION & CHARGEBACKS
+
+• If you have a concern, please contact support@fundedpro.com before initiating any dispute.
+• Raising a false dispute or chargeback will result in immediate account suspension and permanent ban from future participation.
+• To reactivate an account after a dispute, you must withdraw the dispute and provide official proof.
+• Reactivation may take 45–60 business days after verification.
+
+We encourage open communication and fair resolution through our support team.
+
+10. PRIVACY & KYC (KNOW YOUR CUSTOMER)
+
+To comply with global financial regulations and prevent fraud, we conduct KYC verification:
+• Required before your first payout.
+• Conducted via trusted third parties like Veriff or Sumsub.
+• Involves submitting a valid government-issued ID (Passport or National ID).
+• Expired documents will not be accepted.
+• We do not store your KYC data — it is securely handled by our partners.
+
+Failure to complete KYC will result in payouts being withheld.
+
+11. LIMITATION OF LIABILITY & DISCLAIMER
+
+• Our Services are provided "as is" and "as available".
+• We do not guarantee uninterrupted, error-free, or secure access.
+• We are not liable for any trading losses, profits, data loss, or indirect damages.
+• You use our platform at your own risk.
+• We reserve the right to suspend or modify Services at any time.
+
+To the fullest extent permitted by law, FundedPro and its affiliates disclaim all warranties, including merchantability or fitness for a particular purpose.
+
+12. CHANGES TO THESE TERMS
+
+We may update these Terms at any time. Changes will be:
+• Posted on this page.
+• Communicated via email or dashboard notification.
+
+Your continued use of the Services after updates constitutes acceptance. We recommend reviewing these Terms periodically.
+
+13. GOVERNING LAW & JURISDICTION
+
+These Terms are governed by the laws of the United Arab Emirates (UAE). Any disputes will be resolved in the courts of Ajman, UAE.
+
+You also agree to comply with all local laws in your country of residence.
+
+14. CONTACT INFORMATION
+
+For questions about these Terms, our Services, or support:
+
+Email: support@fundedpro.com
+Address: Office No. 7, AI Robotics HUB, C1 Building, AFZ, Ajman, UAE
+
+PROHIBITED COUNTRIES
+
+Due to international sanctions and regulatory restrictions, our Services are not available in:
+• Russia, Iran, North Korea, Syria, Sudan, Cuba, Venezuela, Afghanistan, Belarus, Myanmar, Lebanon, Libya, Somalia, Yemen, Zimbabwe
+• Bangladesh
+• United States of America (USA)
+
+We comply with OFAC, FATF, and other global anti-money laundering standards.
+
+Note: These Terms reflect the values of FundedPro: Transparency, Innovation, and Trader-First Philosophy. We exist to support your success — not to create barriers.
