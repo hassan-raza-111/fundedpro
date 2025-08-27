@@ -1,11 +1,13 @@
 # FundedPro Chatbot Component
 
 ## Overview
+
 A fully responsive, intelligent chatbot component designed specifically for the FundedPro website. The chatbot provides instant responses to user queries using a comprehensive FAQ system and matches the website's premium design aesthetic.
 
 ## Features
 
 ### 🎨 Design & UI
+
 - **Brand-consistent styling**: Matches FundedPro's color scheme (brand-cyan, brand-navy, brand-gold)
 - **Glassmorphism effects**: Modern backdrop blur and transparency effects
 - **Smooth animations**: Floating animations, typing indicators, and smooth transitions
@@ -13,6 +15,7 @@ A fully responsive, intelligent chatbot component designed specifically for the 
 - **Floating chat button**: Animated glow effect with hover interactions
 
 ### 🤖 Intelligence & Functionality
+
 - **Smart FAQ matching**: Advanced keyword matching with synonyms and variations
 - **13 predefined FAQ responses**: Covers all major FundedPro topics
 - **Fallback support**: Directs users to support@thefundedpro.com for unhandled queries
@@ -20,8 +23,9 @@ A fully responsive, intelligent chatbot component designed specifically for the 
 - **Typing indicators**: Realistic bot typing animation
 
 ### 📱 User Experience
+
 - **Minimize/Maximize**: Collapsible chat window
-- **Keyboard shortcuts**: 
+- **Keyboard shortcuts**:
   - `Ctrl/Cmd + K`: Toggle chat
   - `Escape`: Close chat
 - **Auto-scroll**: Automatically scrolls to latest messages
@@ -29,6 +33,7 @@ A fully responsive, intelligent chatbot component designed specifically for the 
 - **Accessibility**: ARIA labels and keyboard navigation
 
 ### ⚡ Performance
+
 - **Memoized components**: Optimized re-renders
 - **Efficient state management**: Minimal re-renders
 - **Lazy loading**: Components load only when needed
@@ -53,6 +58,7 @@ A fully responsive, intelligent chatbot component designed specifically for the 
 ## Technical Implementation
 
 ### File Structure
+
 ```
 components/
 ├── chatbot.tsx          # Main chatbot component
@@ -64,6 +70,7 @@ app/
 ```
 
 ### Key Technologies
+
 - **React 19** with hooks and memoization
 - **TypeScript** for type safety
 - **Tailwind CSS** for styling
@@ -71,6 +78,7 @@ app/
 - **Radix UI** for accessible components
 
 ### Responsive Breakpoints
+
 - **Desktop**: 1024px+ - Full chat window (384px width)
 - **Tablet**: 768px-1023px - Optimized layout
 - **Mobile**: <768px - Compact design with touch targets
@@ -88,40 +96,47 @@ The chatbot is automatically integrated into the main page and appears as a floa
 ## Customization
 
 ### Adding New FAQ Items
+
 Edit the `FAQ_DATA` array in `components/chatbot.tsx`:
 
 ```typescript
 const FAQ_DATA = [
   {
-    question: "Your new question?",
-    answer: "Your detailed answer here.",
+    question: 'Your new question?',
+    answer: 'Your detailed answer here.',
   },
   // ... existing items
 ];
 ```
 
 ### Modifying Styling
+
 Update the CSS classes in `app/globals.css` under the "Chatbot responsive styles" section.
 
 ### Changing Colors
+
 Modify the brand color variables in `app/globals.css`:
+
 - `--brand-cyan`: #00e5ff
 - `--brand-navy`: #1a237e
 - `--brand-gold`: #ffd700
 
 ## Browser Support
+
 - Chrome 90+
 - Firefox 88+
 - Safari 14+
 - Edge 90+
 
 ## Performance Metrics
+
 - **First Load**: <50ms component initialization
 - **Message Response**: <1000ms typing simulation
 - **Animation**: 60fps smooth transitions
 - **Memory**: <5MB component footprint
 
 ## Future Enhancements
+
 - [ ] Voice input support
 - [ ] Multi-language support
 - [ ] Chat history persistence

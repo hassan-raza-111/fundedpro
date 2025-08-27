@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -304,18 +304,24 @@
     will-change: transform, opacity;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
   }
 
   /* Scroll reveal states to avoid initial flash/blink */
   .reveal-hidden {
     opacity: 0;
     transform: translateY(32px);
-    transition: opacity 400ms ease-out, transform 400ms ease-out;
+    transition:
+      opacity 400ms ease-out,
+      transform 400ms ease-out;
+    will-change: transform, opacity;
   }
 
   .reveal-visible {
     opacity: 1 !important;
     transform: translateY(0) !important;
+    will-change: auto;
   }
 
   /* Reduce motion for users who prefer it */
@@ -328,12 +334,52 @@
     .animate-slide-up {
       animation: none !important;
     }
-    
+
     * {
       transition-duration: 0.01ms !important;
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
     }
+
+    html {
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Enhanced scroll performance for mobile devices */
+  @media (max-width: 768px) {
+    html {
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Reduce animation complexity on mobile */
+    .animate-float {
+      animation-duration: 8s !important;
+    }
+
+    .animate-glow {
+      animation-duration: 3s !important;
+    }
+  }
+
+  /* Optimize animations for better performance */
+  .animate-float {
+    will-change: transform;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+
+  .animate-glow {
+    will-change: box-shadow;
+  }
+
+  .animate-pulse {
+    will-change: opacity;
   }
 
   /* Track Selector Styles */
@@ -360,7 +406,7 @@
     color: rgba(255, 255, 255, 0.7);
     font-weight: 600;
     font-size: 0.875rem;
-    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     min-height: 44px;
     touch-action: manipulation;
@@ -382,7 +428,7 @@
   .track-section {
     opacity: 0;
     transform: translateY(20px);
-    transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display: none;
   }
 
@@ -426,7 +472,7 @@
     color: rgba(255, 255, 255, 0.7);
     font-weight: 600;
     font-size: 0.875rem;
-    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     min-height: 44px;
     min-width: 100px;
@@ -459,7 +505,7 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 2rem;
-    transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 1;
     transform: translateY(0);
   }
@@ -563,7 +609,7 @@
     border-radius: 8px;
     font-weight: 700;
     font-size: 1rem;
-    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     min-height: 48px;
     touch-action: manipulation;
@@ -595,7 +641,9 @@
     box-shadow: 0 0 20px #00e5ff;
   }
   to {
-    box-shadow: 0 0 30px #00e5ff, 0 0 40px #00e5ff;
+    box-shadow:
+      0 0 30px #00e5ff,
+      0 0 40px #00e5ff;
   }
 }
 
@@ -642,127 +690,272 @@
   }
 }
 
-/* Mobile Responsive Adjustments */
-@media (max-width: 767px) {
-  html {
-    font-size: 14px;
-  }
-
-  body {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
-  .track-selector {
-    flex-direction: column;
-    max-width: 280px;
-    margin: 0 auto 2rem;
-  }
-
-  .account-selector-tabs {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0 1rem;
-  }
-
-  .account-tab {
-    width: 100%;
-    max-width: 200px;
-    font-size: 0.9rem;
-  }
-
-  .plan-table {
-    padding: 1.5rem;
-    margin: 0 0.5rem;
-  }
-
-  .plan-price {
-    font-size: 2.5rem;
-  }
-
-  .detail-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.25rem;
-    padding: 0.5rem 0;
-  }
-
-  .highlight-item {
-    font-size: 0.85rem;
-  }
-
-  /* Better mobile touch targets */
-  .choose-plan-btn {
-    min-height: 52px;
-    font-size: 1.1rem;
-  }
-}
-
-/* Enhanced tablet responsive design */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .account-selector-tabs {
-    max-width: 500px;
-    margin: 0 auto 2rem;
-  }
-
-  .plan-table {
-    max-width: 500px;
-  }
-
-  .plan-price {
-    font-size: 2.8rem;
-  }
-}
-
-/* Enhanced desktop responsive design */
-@media (min-width: 1024px) {
-  .plan-table:hover {
-    transform: translateY(-8px) scale(1.02);
-  }
-
-  .choose-plan-btn:hover {
-    transform: translateY(-3px) scale(1.05);
-  }
-}
-
-/* Chatbot responsive styles */
+/* Enhanced mobile responsive design */
 @media (max-width: 640px) {
-  .chatbot-container {
-    bottom: 1rem !important;
-    right: 1rem !important;
+  /* Mobile-first approach */
+  .container-responsive {
+    padding: 0 0.75rem;
   }
-  
-  .chatbot-window {
-    width: calc(100vw - 2rem) !important;
-    max-width: 350px !important;
-    height: 450px !important;
+
+  /* Better mobile spacing */
+  .mobile-padding {
+    padding: 1rem 0.75rem;
   }
-  
-  .chatbot-window.minimized {
-    width: 280px !important;
-    height: 64px !important;
+
+  /* Mobile text sizes */
+  .mobile-text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
-  
-  .chatbot-floating-btn {
-    width: 3.5rem !important;
-    height: 3.5rem !important;
+
+  .mobile-text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .mobile-text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .mobile-text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  /* Mobile grid adjustments */
+  .mobile-grid-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .mobile-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Mobile spacing utilities */
+  .mobile-gap-2 {
+    gap: 0.5rem;
+  }
+
+  .mobile-gap-3 {
+    gap: 0.75rem;
+  }
+
+  .mobile-gap-4 {
+    gap: 1rem;
+  }
+
+  /* Mobile margin utilities */
+  .mobile-mt-2 {
+    margin-top: 0.5rem;
+  }
+
+  .mobile-mt-4 {
+    margin-top: 1rem;
+  }
+
+  .mobile-mt-6 {
+    margin-top: 1.5rem;
+  }
+
+  .mobile-mb-2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .mobile-mb-4 {
+    margin-bottom: 1rem;
+  }
+
+  .mobile-mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Mobile padding utilities */
+  .mobile-p-2 {
+    padding: 0.5rem;
+  }
+
+  .mobile-p-3 {
+    padding: 0.75rem;
+  }
+
+  .mobile-p-4 {
+    padding: 1rem;
+  }
+
+  /* Mobile rounded corners */
+  .mobile-rounded {
+    border-radius: 0.5rem;
+  }
+
+  .mobile-rounded-lg {
+    border-radius: 0.75rem;
+  }
+
+  /* Mobile button sizes */
+  .mobile-btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .mobile-btn-base {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .mobile-btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
   }
 }
 
-@media (max-width: 480px) {
-  .chatbot-window {
-    width: calc(100vw - 1rem) !important;
-    max-width: 320px !important;
-    height: 400px !important;
+/* Tablet responsive adjustments */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .tablet-container {
+    padding: 0 1.5rem;
   }
-  
-  .chatbot-window.minimized {
-    width: 260px !important;
+
+  .tablet-text-lg {
+    font-size: 1.125rem;
+  }
+
+  .tablet-text-xl {
+    font-size: 1.25rem;
+  }
+
+  .tablet-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Ensure content is visible on all screen sizes */
+@media (max-width: 480px) {
+  /* Extra small mobile devices */
+  .xs-mobile-padding {
+    padding: 0.5rem;
+  }
+
+  .xs-mobile-text {
+    font-size: 0.875rem;
+  }
+
+  .xs-mobile-gap {
+    gap: 0.5rem;
+  }
+
+  /* Prevent horizontal overflow */
+  .xs-mobile-container {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+/* Fix for very small screens */
+@media (max-width: 360px) {
+  .xxs-mobile-text {
+    font-size: 0.75rem;
+  }
+
+  .xxs-mobile-padding {
+    padding: 0.25rem;
+  }
+}
+
+/* Ensure all content is visible */
+* {
+  box-sizing: border-box;
+}
+
+/* Prevent horizontal scrolling */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Mobile touch improvements */
+@media (max-width: 768px) {
+  button,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+    touch-action: manipulation;
+  }
+
+  /* Better mobile scrolling */
+  .mobile-scroll {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  /* Mobile card improvements */
+  .mobile-card {
+    margin: 0.5rem;
+    border-radius: 0.75rem;
   }
 }
 
 @theme inline {
   --font-sans: var(--font-inter);
   --font-display: var(--font-poppins);
+}
+
+/* TrustBox Widget Styling */
+.trustpilot-widget-container {
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.trustpilot-widget-container:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 229, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 229, 255, 0.1);
+}
+
+.trustpilot-widget {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 52px;
+}
+
+.trustpilot-widget-placeholder {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure TrustBox widget is responsive */
+@media (max-width: 768px) {
+  .trustpilot-widget-container {
+    margin: 1.5rem auto;
+    padding: 0.75rem;
+  }
+
+  .trustpilot-widget,
+  .trustpilot-widget-placeholder {
+    min-height: 48px;
+  }
+}
+
+/* Animation for TrustBox appearance */
+.trustpilot-widget-container {
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

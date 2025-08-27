@@ -41,12 +41,12 @@ const nextConfig = {
           },
         ],
       },
-    ]
+    ];
   },
   // Compression
   compress: true,
   // Power by header removal
   poweredByHeader: false,
-}
+};
 
-export default nextConfig
+export default nextConfig;

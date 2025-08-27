@@ -1,54 +1,67 @@
-import type React from "react"
-import type { Metadata, Viewport } from "next"
-import { Inter, Poppins } from "next/font/google"
-import "./globals.css"
+import type React from 'react';
+import type { Metadata, Viewport } from 'next';
+import { Inter, Poppins } from 'next/font/google';
+import Script from 'next/script';
+import './globals.css';
 
 const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-})
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
 
 const poppins = Poppins({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-poppins",
-  weight: ["400", "500", "600", "700"],
-})
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-poppins',
+  weight: ['400', '500', '600', '700'],
+});
 
 export const metadata: Metadata = {
-  title: "FundedPro - Empowering Promising Traders Worldwide",
+  title: 'FundedPro - Empowering Promising Traders Worldwide',
   description:
-    "Access funded trading accounts with extended evaluation periods, industry-leading profit splits, and seamless trading integration.",
-  robots: "index, follow",
-  keywords: "funded trading, prop trading, forex, trading challenge, live trading accounts",
-  authors: [{ name: "FundedPro" }],
+    'Access funded trading accounts with extended evaluation periods, industry-leading profit splits, and seamless trading integration.',
+  robots: 'index, follow',
+  keywords:
+    'funded trading, prop trading, forex, trading challenge, live trading accounts',
+  authors: [{ name: 'FundedPro' }],
   openGraph: {
-    title: "FundedPro - Empowering Promising Traders Worldwide",
-    description: "Access funded trading accounts with extended evaluation periods, industry-leading profit splits, and seamless trading integration.",
-    type: "website",
+    title: 'FundedPro - Empowering Promising Traders Worldwide',
+    description:
+      'Access funded trading accounts with extended evaluation periods, industry-leading profit splits, and seamless trading integration.',
+    type: 'website',
   },
-}
+};
 
 export const viewport: Viewport = {
-  width: "device-width",
+  width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable} antialiased dark`}>
-      <body 
+    <html
+      lang="en"
+      className={`${inter.variable} ${poppins.variable} dark antialiased`}
+    >
+      <head>
+        <Script
+          type="text/javascript"
+          src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+          strategy="afterInteractive"
+        />
+      </head>
+      <body
         className="min-h-screen bg-gradient-to-br from-[#2d1b69] via-[#1a237e] to-[#0f1419]"
         suppressHydrationWarning={true}
       >
         {children}
       </body>
     </html>
-  )
+  );
 }
